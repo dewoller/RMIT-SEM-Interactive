@@ -731,3 +731,83 @@ footer p {
     color: var(--muted);
     line-height: 1.5;
 }
+
+/* ============================================================
+   Responsive Adjustments
+   ============================================================ */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        min-height: auto;
+        padding: 2.5rem 0;
+    }
+
+    .fit-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .definition-card {
+        padding: 1rem;
+    }
+}
+
+/* ============================================================
+   Focus Styles (keyboard accessibility)
+   ============================================================ */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================================================
+   Print Styles
+   ============================================================ */
+@media print {
+    #main-nav,
+    #progress-bar,
+    #glossary,
+    .controls,
+    .skip-link {
+        display: none !important;
+    }
+
+    body {
+        padding-top: 0;
+        font-size: 12pt;
+    }
+
+    section {
+        min-height: auto;
+        page-break-inside: avoid;
+    }
+}
