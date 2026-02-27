@@ -1,0 +1,72 @@
+<!-- ABOUTME: Main HTML page for the interactive SEM educational web application.
+     ABOUTME: Long-scrolling page teaching Structural Equation Modeling to psychology students. -->
+<!-- Deployment: Serve this directory as static files. No build tools required. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Structural Equation Modeling (SEM)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+    <script src="js/diagrams.js" defer></script>
+    <script src="js/simulations.js" defer></script>
+</head>
+<body>
+    <a href="#content" class="skip-link">Skip to content</a>
+    <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <nav id="main-nav" aria-label="Section navigation">
+        <a href="#section-welcome">Welcome</a>
+        <a href="#section-data-types">Data Types</a>
+        <a href="#section-variables">Variables</a>
+        <a href="#section-tests">Tests</a>
+        <a href="#section-sem-intro">SEM Intro</a>
+        <a href="#section-key-concepts">Key Concepts</a>
+        <a href="#section-sem-process">SEM Process</a>
+        <a href="#section-fit-indices">Fit Indices</a>
+        <a href="#section-software">Software</a>
+        <a href="#section-case-study">Case Study</a>
+    </nav>
+    <main id="content">
+        <section id="section-welcome">
+            <h2>Welcome and Learning Objectives</h2>
+        </section>
+        <section id="section-data-types">
+            <h2>Data Types Foundation</h2>
+        </section>
+        <section id="section-variables">
+            <h2>Understanding Variables</h2>
+        </section>
+        <section id="section-tests">
+            <h2>Parametric vs Non-Parametric Tests</h2>
+        </section>
+        <section id="section-sem-intro">
+            <h2>Introduction to SEM</h2>
+        </section>
+        <section id="section-key-concepts">
+            <h2>Key Concepts and Latent Variables</h2>
+        </section>
+        <section id="section-sem-process">
+            <h2>SEM Analysis Process</h2>
+        </section>
+        <section id="section-fit-indices">
+            <h2>Model Fit and Indices</h2>
+        </section>
+        <section id="section-software">
+            <h2>Software and Tools</h2>
+        </section>
+        <section id="section-case-study">
+            <h2>Case Study</h2>
+        </section>
+    </main>
+    <footer>
+        <p>Based on lecture material by <strong>Prof Leila Karimi</strong>, RMIT University.</p>
+        <p>Karimi, L., &amp; Meyer, D. (2014). Structural Equation Modeling in Psychology. <em>International Journal of Psychological Studies, 6</em>(4), 123-133.</p>
+    </footer>
+</body>
+</html>
