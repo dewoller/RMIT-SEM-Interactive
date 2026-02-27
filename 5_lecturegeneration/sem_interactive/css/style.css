@@ -610,6 +610,56 @@ footer p {
     background: white;
 }
 
+.slider-group {
+    margin-bottom: 1rem;
+}
+
+.slider-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.slider-group input[type="range"] {
+    width: 100%;
+}
+
+.slider-value {
+    font-family: var(--font-mono);
+    color: var(--accent);
+}
+
+.fit-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.fit-card {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.fit-card .value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+.fit-card .label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+}
+
+.fit-card.good { background: #f0fdf4; }
+.fit-card.ok { background: #fefce8; }
+.fit-card.poor { background: #fef2f2; }
+
 /* ============================================================
    Glossary Sidebar
    ============================================================ */
