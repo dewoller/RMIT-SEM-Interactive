@@ -57,4 +57,14 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // --- Glossary Toggle ---
+    const glossary = document.getElementById('glossary');
+    const glossaryToggle = document.getElementById('glossary-toggle');
+    if (glossary && glossaryToggle) {
+        glossaryToggle.addEventListener('click', function () {
+            const isOpen = glossary.classList.toggle('open');
+            glossaryToggle.setAttribute('aria-expanded', isOpen);
+        });
+    }
 });

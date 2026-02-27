@@ -274,20 +274,306 @@
         </section>
         <section id="section-key-concepts">
             <h2>Key Concepts and Latent Variables</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Learn the core terminology of SEM</li>
+                    <li>Understand what latent variables are and why they matter</li>
+                </ul>
+            </div>
+
+            <h3>Core Terminology</h3>
+            <dl class="term-list">
+                <dt>Latent Variables</dt>
+                <dd>Variables not directly observed but inferred from other variables (e.g., intelligence, self-esteem).</dd>
+                <dt>Indicators (Observed Variables)</dt>
+                <dd>Directly measured variables such as questionnaire items or test scores.</dd>
+                <dt>Endogenous Variable (DV)</dt>
+                <dd>A variable that is predicted or explained by other variables in the model. Must be continuous.</dd>
+                <dt>Exogenous Variable (IV)</dt>
+                <dd>A predictor or covariate that is not explained by other variables in the model.</dd>
+                <dt>Errors</dt>
+                <dd>Variations in observations not explained by the model.</dd>
+                <dt>Paths</dt>
+                <dd>Hypothesised relationships between variables, shown as arrows in diagrams.</dd>
+                <dt>Fit</dt>
+                <dd>How well the model represents the observed data.</dd>
+            </dl>
+
+            <h3>What Is a Latent Variable?</h3>
+            <p>A latent variable is something we cannot observe directly. It explains patterns in observable (measured) variables.</p>
+            <div class="callout">
+                <p><strong>Example:</strong> We cannot measure &ldquo;burnout&rdquo; directly, but we can measure exhaustion, detachment, and reduced accomplishment. Burnout is the latent construct; the three dimensions are observed indicators.</p>
+            </div>
+
+            <div class="diagram-container" id="diagram-sem-model"></div>
+
+            <h3>Quick Quiz</h3>
+            <div class="quiz-container" id="quiz-latent-variables" data-quiz="latent-variables"></div>
+
+            <h3>When and Why Use SEM?</h3>
+            <ul class="example-list">
+                <li>Testing complex theoretical models with multiple IVs and DVs</li>
+                <li>Handling latent constructs that cannot be measured directly</li>
+                <li>When multivariate relationships are expected</li>
+                <li>Accounting for measurement error in observed variables</li>
+                <li>Testing multiple relationships simultaneously</li>
+            </ul>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>Latent variables are constructs we infer from measurable indicators. SEM lets us model these hidden constructs alongside directly observed variables in a single analysis.</p>
+            </div>
         </section>
         <section id="section-sem-process">
             <h2>SEM Analysis Process</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Know the six steps of a SEM analysis</li>
+                    <li>Identify common assumption violations</li>
+                </ul>
+            </div>
+
+            <h3>Steps in SEM Analysis</h3>
+            <ol class="process-steps">
+                <li>
+                    <strong>Model Specification</strong>
+                    <p>Define the theoretical model: which variables, which paths, which latent constructs.</p>
+                </li>
+                <li>
+                    <strong>Data Collection</strong>
+                    <p>Gather data with adequate sample size and appropriate measures.</p>
+                </li>
+                <li>
+                    <strong>Model Estimation</strong>
+                    <p>Use Maximum Likelihood (ML) or other robust methods (e.g., GLS) to estimate parameters.</p>
+                </li>
+                <li>
+                    <strong>Model Evaluation</strong>
+                    <p>Assess fit using multiple indices (Chi-square, CFI, RMSEA, SRMR).</p>
+                </li>
+                <li>
+                    <strong>Model Modification</strong>
+                    <p>If fit is poor, revise the model based on theory and modification indices.</p>
+                </li>
+                <li>
+                    <strong>Final Interpretation</strong>
+                    <p>Report path coefficients, fit indices, and substantive conclusions.</p>
+                </li>
+            </ol>
+
+            <h3>Assumptions of SEM</h3>
+            <div class="definition-card">
+                <ul class="example-list">
+                    <li><strong>Adequate sample size</strong> &mdash; typically 5&ndash;10 cases per estimated parameter</li>
+                    <li><strong>Multivariate normality</strong> &mdash; variables should follow a multivariate normal distribution</li>
+                    <li><strong>Linear relationships</strong> &mdash; paths model linear effects</li>
+                    <li><strong>No multicollinearity</strong> &mdash; predictors should not be too highly correlated</li>
+                    <li><strong>Correct model specification</strong> &mdash; the theoretical model should be justified</li>
+                </ul>
+            </div>
+
+            <h3>Activity: Spot the Assumption Violation</h3>
+            <div class="quiz-container" id="quiz-assumption-violations" data-quiz="assumption-violations"></div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>SEM follows a structured six-step process. Checking assumptions before estimation is critical &mdash; violations can lead to misleading results.</p>
+            </div>
         </section>
         <section id="section-fit-indices">
             <h2>Model Fit and Indices</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Understand what each major fit index measures</li>
+                    <li>Know the thresholds for acceptable and good fit</li>
+                </ul>
+            </div>
+
+            <h3>Common Fit Indices</h3>
+            <div class="fit-table-wrapper">
+                <table class="fit-table">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>What It Measures</th>
+                            <th>Good Fit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chi-square</strong></td>
+                            <td>Overall discrepancy between observed and model-implied covariances</td>
+                            <td>p &gt; 0.05</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CFI</strong></td>
+                            <td>Improvement over a baseline (null) model, accounting for sample size</td>
+                            <td>&ge; 0.95</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RMSEA</strong></td>
+                            <td>Error of approximation per degree of freedom, penalises complexity</td>
+                            <td>&le; 0.06</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SRMR</strong></td>
+                            <td>Average standardised residual between observed and predicted correlations</td>
+                            <td>&le; 0.06</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="callout">
+                <p><strong>Pro Tip:</strong> Never rely on just ONE fit index. Report multiple because different indices are sensitive to different problems.</p>
+            </div>
+
+            <h3>Interactive: Fit Index Explorer</h3>
+            <div class="simulation-container" id="sim-fit-explorer"></div>
+
+            <h3>Practice: Compare Model Fit</h3>
+            <div class="quiz-container" id="quiz-model-fit" data-quiz="model-fit"></div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>Model fit is assessed using multiple complementary indices. No single index tells the whole story &mdash; always report Chi-square, CFI, RMSEA, and SRMR together.</p>
+            </div>
         </section>
         <section id="section-software">
             <h2>Software and Tools</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Know the major SEM software options and their strengths</li>
+                </ul>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="definition-card">
+                    <h3>AMOS</h3>
+                    <p>User-friendly graphical interface integrated with SPSS. Great for beginners who prefer drag-and-drop model building.</p>
+                </div>
+                <div class="definition-card">
+                    <h3>LISREL</h3>
+                    <p>One of the oldest and most established SEM packages. Widely cited in the literature.</p>
+                </div>
+                <div class="definition-card">
+                    <h3>Mplus</h3>
+                    <p>Flexible and powerful. Handles complex models including mixture models and multilevel SEM.</p>
+                </div>
+                <div class="definition-card">
+                    <h3>R (lavaan)</h3>
+                    <p>Free and open-source. The <code>lavaan</code> package provides a clean syntax for specifying SEM models in R.</p>
+                </div>
+            </div>
+            <div class="definition-card" style="max-width: 48%;">
+                <h3>Python (semopy)</h3>
+                <p>Open-source Python package using lavaan-style syntax. Integrates with the broader Python data science ecosystem.</p>
+            </div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>Choose SEM software based on your familiarity, budget, and the complexity of your model. Free options like R lavaan and Python semopy are excellent for learning.</p>
+            </div>
         </section>
         <section id="section-case-study">
-            <h2>Case Study</h2>
+            <h2>Case Study: Stress, Anxiety, and Academic Performance</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>See how SEM is applied to a real research question</li>
+                    <li>Explore a model built from actual psychology research data</li>
+                </ul>
+            </div>
+
+            <p>A researcher wants to examine the relationships between <strong>stress</strong>, <strong>anxiety</strong>, <strong>coping mechanisms</strong>, and <strong>academic performance</strong> in university students.</p>
+
+            <h3>Hypothesised Model</h3>
+            <div class="definition-card">
+                <ul class="example-list">
+                    <li><strong>Stress &rarr; Performance</strong> &mdash; higher stress reduces academic performance</li>
+                    <li><strong>Stress &rarr; Anxiety</strong> &mdash; stress increases anxiety levels</li>
+                    <li><strong>Coping &rarr; Performance</strong> &mdash; better coping strategies improve performance</li>
+                    <li><strong>Coping &rarr; Anxiety</strong> &mdash; effective coping reduces anxiety</li>
+                </ul>
+            </div>
+
+            <h3>Interactive: BKS Dataset SEM Model</h3>
+            <p>Below is a SEM model fitted to the Big Kink Survey public dataset, using personality traits (OCEAN) as indicators of a latent Personality construct, with structural paths to Powerlessness.</p>
+            <div class="simulation-container" id="sim-bks-model"></div>
+
+            <h3>Evaluating the Model</h3>
+            <div class="definition-card">
+                <ul class="example-list">
+                    <li>Chi-square: p &gt; 0.05 for good fit</li>
+                    <li>CFI: close to 1 (above 0.95)</li>
+                    <li>RMSEA: below 0.06</li>
+                    <li>SRMR: below 0.06</li>
+                </ul>
+            </div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>SEM allows researchers to test entire theoretical models at once. Always evaluate model fit using multiple indices before interpreting path coefficients.</p>
+            </div>
         </section>
     </main>
+
+    <!-- Glossary sidebar -->
+    <aside id="glossary" role="complementary" aria-label="Glossary of terms">
+        <button id="glossary-toggle" aria-expanded="false" aria-controls="glossary-content">Glossary</button>
+        <div id="glossary-content">
+            <h3>Glossary</h3>
+            <dl>
+                <dt>ANOVA</dt>
+                <dd>Analysis of Variance; compares means across three or more groups.</dd>
+                <dt>CFI</dt>
+                <dd>Comparative Fit Index; ranges 0&ndash;1, values above 0.95 indicate good fit.</dd>
+                <dt>Chi-square</dt>
+                <dd>A test statistic measuring discrepancy between observed and expected covariances.</dd>
+                <dt>Continuous Data</dt>
+                <dd>Numerical data with meaningful intervals (e.g., age, test scores).</dd>
+                <dt>Dependent Variable (DV)</dt>
+                <dd>The outcome variable being predicted or explained.</dd>
+                <dt>Dichotomous Data</dt>
+                <dd>Data with exactly two categories (e.g., yes/no).</dd>
+                <dt>Endogenous Variable</dt>
+                <dd>A variable predicted by other variables in the model.</dd>
+                <dt>Exogenous Variable</dt>
+                <dd>A predictor variable not explained by other model variables.</dd>
+                <dt>Factor Loading</dt>
+                <dd>The strength of association between a latent variable and its observed indicator.</dd>
+                <dt>Fit Indices</dt>
+                <dd>Statistics that quantify how well a model reproduces observed data patterns.</dd>
+                <dt>Independent Variable (IV)</dt>
+                <dd>The predictor variable manipulated or measured to explain the DV.</dd>
+                <dt>Indicator</dt>
+                <dd>An observed variable used to measure a latent construct.</dd>
+                <dt>Latent Variable</dt>
+                <dd>An unobserved construct inferred from measured indicators (e.g., self-esteem).</dd>
+                <dt>Maximum Likelihood (ML)</dt>
+                <dd>The standard estimation method in SEM; finds parameters that maximise the likelihood of the observed data.</dd>
+                <dt>Mediator</dt>
+                <dd>A variable that explains HOW an IV affects a DV (IV &rarr; Mediator &rarr; DV).</dd>
+                <dt>Moderator</dt>
+                <dd>A variable that changes the STRENGTH or DIRECTION of the IV&ndash;DV relationship.</dd>
+                <dt>Multicollinearity</dt>
+                <dd>When two or more predictors are very highly correlated, making estimates unstable.</dd>
+                <dt>Path Coefficient</dt>
+                <dd>The estimated strength of a directional relationship between two variables.</dd>
+                <dt>RMSEA</dt>
+                <dd>Root Mean Square Error of Approximation; values below 0.06 indicate good fit.</dd>
+                <dt>SEM</dt>
+                <dd>Structural Equation Modeling; a framework combining factor analysis and path analysis.</dd>
+                <dt>SRMR</dt>
+                <dd>Standardised Root Mean Square Residual; values below 0.06 indicate good fit.</dd>
+            </dl>
+        </div>
+    </aside>
+
     <footer>
         <p>Based on lecture material by <strong>Prof Leila Karimi</strong>, RMIT University.</p>
         <p>Karimi, L., &amp; Meyer, D. (2014). Structural Equation Modeling in Psychology. <em>International Journal of Psychological Studies, 6</em>(4), 123-133.</p>
