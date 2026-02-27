@@ -110,12 +110,167 @@
         </section>
         <section id="section-variables">
             <h2>Understanding Variables</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Distinguish between independent and dependent variables</li>
+                    <li>Understand how mediators and moderators extend basic relationships</li>
+                </ul>
+            </div>
+
+            <div class="definition-card">
+                <h3>Independent Variable (IV)</h3>
+                <p>The variable you manipulate or use to predict an outcome.</p>
+                <ul class="example-list">
+                    <li>Type of therapy (CBT vs control)</li>
+                    <li>Dosage of medication</li>
+                    <li>Gender, age group</li>
+                    <li>Stress level</li>
+                </ul>
+                <p class="note">Also called: predictor, explanatory variable, factor, treatment.</p>
+            </div>
+
+            <div class="definition-card">
+                <h3>Dependent Variable (DV)</h3>
+                <p>The variable you measure or try to predict.</p>
+                <ul class="example-list">
+                    <li>Depression score after treatment</li>
+                    <li>Test performance</li>
+                    <li>Recovery rate</li>
+                    <li>Reaction time</li>
+                </ul>
+                <p class="note">Also called: outcome, response variable, criterion.</p>
+            </div>
+
+            <div class="callout">
+                <p><strong>Remember:</strong> IV &rarr; DV &mdash; &ldquo;Does the IV affect or predict the DV?&rdquo;</p>
+                <p>Example: Does therapy type (IV) affect depression scores (DV)?</p>
+            </div>
+
+            <h3>Interactive: Variable Relationships</h3>
+            <div class="diagram-container" id="diagram-variables"></div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>Research designs always start with identifying which variables are predictors (IVs) and which are outcomes (DVs). Mediators and moderators add nuance to that basic relationship.</p>
+            </div>
         </section>
         <section id="section-tests">
             <h2>Parametric vs Non-Parametric Tests</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Know when to use parametric versus non-parametric tests</li>
+                    <li>Navigate a decision tree to choose the right statistical test</li>
+                </ul>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="definition-card">
+                    <h3>Parametric Tests</h3>
+                    <p>Tests that make assumptions about the underlying population distribution.</p>
+                    <h4>Requirements</h4>
+                    <ul class="example-list">
+                        <li>Data is normally distributed</li>
+                        <li>Data is continuous (scale/interval/ratio)</li>
+                        <li>Equal variances (homogeneity)</li>
+                        <li>Independent observations</li>
+                    </ul>
+                    <h4>Common Tests</h4>
+                    <ul class="example-list">
+                        <li>Independent t-test</li>
+                        <li>Paired t-test</li>
+                        <li>ANOVA</li>
+                        <li>Pearson correlation</li>
+                        <li>Linear regression</li>
+                    </ul>
+                    <p class="note">More powerful when assumptions are met.</p>
+                </div>
+                <div class="definition-card">
+                    <h3>Non-Parametric Tests</h3>
+                    <p>Distribution-free tests that require fewer assumptions about the data.</p>
+                    <h4>When to Use</h4>
+                    <ul class="example-list">
+                        <li>Data is NOT normally distributed</li>
+                        <li>Data is ordinal (ranked)</li>
+                        <li>Small sample sizes</li>
+                        <li>Outliers present</li>
+                        <li>Parametric assumptions violated</li>
+                    </ul>
+                    <h4>Common Tests</h4>
+                    <ul class="example-list">
+                        <li>Mann-Whitney U</li>
+                        <li>Wilcoxon signed-rank</li>
+                        <li>Kruskal-Wallis</li>
+                        <li>Spearman correlation</li>
+                        <li>Chi-square</li>
+                    </ul>
+                    <p class="note">More robust but less powerful.</p>
+                </div>
+            </div>
+
+            <h3>Interactive: Which Test Should I Use?</h3>
+            <div class="diagram-container" id="diagram-decision-tree"></div>
+
+            <div class="callout">
+                <p><strong>Pro Tip:</strong> Always check your assumptions BEFORE choosing your test!</p>
+            </div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>Parametric tests are more powerful but require stricter assumptions. When those assumptions are violated, non-parametric alternatives give more trustworthy results.</p>
+            </div>
         </section>
         <section id="section-sem-intro">
             <h2>Introduction to SEM</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Define Structural Equation Modeling and its purpose</li>
+                    <li>Understand where SEM fits in the history of statistical methods</li>
+                </ul>
+            </div>
+
+            <p>Structural Equation Modelling (SEM) is a statistical approach for exploring and analysing relationships between observed variables and underlying latent constructs. It combines multiple regression, factor analysis, and path analysis into a single framework.</p>
+
+            <h3>History and Evolution</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">1920s</span>
+                    <div class="timeline-content">
+                        <strong>Path Analysis</strong>
+                        <p>Sewall Wright develops path analysis, laying the groundwork for modelling directional relationships between variables.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">Mid-20th C</span>
+                    <div class="timeline-content">
+                        <strong>Factor Analysis Evolution</strong>
+                        <p>Researchers refine techniques for identifying latent constructs from observed measurements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1970s</span>
+                    <div class="timeline-content">
+                        <strong>SEM Formalised</strong>
+                        <p>Path analysis and factor analysis are unified into the framework now known as Structural Equation Modeling.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">1970</span>
+                    <div class="timeline-content">
+                        <strong>EQS Software</strong>
+                        <p>Peter Bentler develops the EQS software package, making SEM accessible to applied researchers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--muted); margin-top: 2rem;">Karimi, L., &amp; Meyer, D. (2014). Structural Equation Modeling in Psychology: The History, Development and Current Challenges. <em>International Journal of Psychological Studies, 6</em>(4), 123-133.</p>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>SEM builds on decades of statistical innovation. It unifies path analysis and factor analysis, letting researchers test entire theoretical models in a single framework.</p>
+            </div>
         </section>
         <section id="section-key-concepts">
             <h2>Key Concepts and Latent Variables</h2>

@@ -276,3 +276,133 @@ footer p {
 .callout strong {
     color: #b45309;
 }
+
+/* ============================================================
+   Comparison Grid (parametric vs non-parametric)
+   ============================================================ */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.definition-card h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+/* ============================================================
+   Timeline
+   ============================================================ */
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid white;
+}
+
+.timeline-date {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   Diagram and Simulation Containers
+   ============================================================ */
+.diagram-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.diagram-container svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.diagram-container .controls {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.diagram-container button,
+.simulation-container button {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--accent);
+    background: white;
+    color: var(--accent);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.diagram-container button:hover,
+.simulation-container button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.diagram-container button:disabled,
+.simulation-container button:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background: #f3f3f0;
+    border-color: #d1d5db;
+    color: var(--muted);
+}
+
+.diagram-explanation {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text);
+    font-style: italic;
+}
