@@ -166,3 +166,113 @@ footer p {
     width: 0%;
     transition: width 0.1s;
 }
+
+/* ============================================================
+   Content Components
+   ============================================================ */
+
+/* Learning callout — blue left border */
+.learning-callout {
+    border-left: 4px solid var(--accent);
+    background: #eff6ff;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 2rem;
+}
+
+.learning-callout h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.learning-callout ul {
+    margin: 0.75rem 0 0 1.5rem;
+    list-style: disc;
+}
+
+.learning-callout li {
+    margin-bottom: 0.35rem;
+}
+
+/* Key takeaway — green left border */
+.key-takeaway {
+    border-left: 4px solid var(--success);
+    background: #f0fdf4;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 2rem;
+}
+
+.key-takeaway h3 {
+    margin-top: 0;
+    color: var(--success);
+    font-size: 1.1rem;
+}
+
+.key-takeaway p {
+    margin-bottom: 0;
+}
+
+/* Definition card */
+.definition-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: white;
+}
+
+.definition-card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.definition-card .note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+/* Example list within definition cards */
+.example-list {
+    list-style: none;
+    margin: 0.75rem 0;
+    padding: 0;
+}
+
+.example-list li {
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    position: relative;
+}
+
+.example-list li::before {
+    content: '\2022';
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Term with dotted underline tooltip */
+.term-tooltip {
+    border-bottom: 1px dotted var(--muted);
+    cursor: help;
+}
+
+/* Remember / Pro Tip callout — amber accent */
+.callout {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.5rem 0;
+}
+
+.callout p {
+    margin-bottom: 0;
+}
+
+.callout strong {
+    color: #b45309;
+}

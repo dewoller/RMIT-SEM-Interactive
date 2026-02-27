@@ -35,9 +35,78 @@
     <main id="content">
         <section id="section-welcome">
             <h2>Welcome and Learning Objectives</h2>
+            <div class="learning-callout">
+                <h3>What You Will Learn</h3>
+                <ul>
+                    <li>Distinguish between continuous, categorical, and dichotomous data</li>
+                    <li>Identify independent and dependent variables in research designs</li>
+                    <li>Choose between parametric and non-parametric tests</li>
+                    <li>Understand the core concepts of Structural Equation Modeling</li>
+                    <li>Read and interpret SEM path diagrams and fit indices</li>
+                    <li>Explore a real SEM model built from psychology research data</li>
+                </ul>
+            </div>
+            <p>This interactive guide walks you through the foundations of Structural Equation Modeling (SEM) as used in psychology research. Starting from basic data types and building up to a complete SEM analysis, each section includes hands-on exercises to test your understanding.</p>
+            <p>Scroll through at your own pace, or use the navigation bar above to jump to any section.</p>
+            <p class="attribution" style="font-size: 0.9rem; color: var(--muted); margin-top: 2rem;">Based on lecture material by <strong>Prof Leila Karimi</strong>, RMIT University.</p>
         </section>
         <section id="section-data-types">
             <h2>Data Types Foundation</h2>
+            <div class="learning-callout">
+                <h3>Section Goal</h3>
+                <ul>
+                    <li>Identify the three main data types used in psychology research</li>
+                    <li>Recognise which statistical operations each type supports</li>
+                </ul>
+            </div>
+            <p>Before diving into SEM, you need a solid understanding of data types. The type of data you collect determines which statistical tests you can use.</p>
+
+            <div class="definition-card">
+                <h3>Continuous Data</h3>
+                <p>Numbers with meaningful intervals and distances between values.</p>
+                <ul class="example-list">
+                    <li>Age in years (18, 25, 42)</li>
+                    <li>Test scores (67, 89, 92)</li>
+                    <li>Reaction time in milliseconds (234, 456)</li>
+                    <li>Depression score on the BDI (0&ndash;63)</li>
+                    <li>Height, weight, temperature</li>
+                </ul>
+                <p class="note">Can calculate mean and standard deviation.</p>
+            </div>
+
+            <div class="definition-card">
+                <h3>Categorical Data</h3>
+                <p>Categories or groups with no inherent numerical meaning.</p>
+                <ul class="example-list">
+                    <li>Gender (Male, Female, Non-binary)</li>
+                    <li>Diagnosis (Depression, Anxiety, PTSD)</li>
+                    <li>Treatment group (Control, Experimental)</li>
+                    <li>Ethnicity, occupation, eye colour</li>
+                    <li>Likert scales (Strongly Disagree &hellip; Strongly Agree)</li>
+                </ul>
+                <p class="note">Cannot calculate a meaningful mean.</p>
+            </div>
+
+            <div class="definition-card">
+                <h3>Dichotomous Data</h3>
+                <p>A special case of categorical data with exactly two categories.</p>
+                <ul class="example-list">
+                    <li>Pass / Fail</li>
+                    <li>Yes / No</li>
+                    <li>Improved / Not Improved</li>
+                    <li>Present / Absent</li>
+                    <li>Alive / Deceased</li>
+                </ul>
+                <p class="note">Can be coded as 0/1 for some analyses.</p>
+            </div>
+
+            <h3>Quick Check</h3>
+            <div class="quiz-container" id="quiz-data-types" data-quiz="data-types"></div>
+
+            <div class="key-takeaway">
+                <h3>Key Takeaway</h3>
+                <p>The type of data you have directly determines which statistical tests are appropriate. Always identify your data types before choosing an analysis method.</p>
+            </div>
         </section>
         <section id="section-variables">
             <h2>Understanding Variables</h2>
