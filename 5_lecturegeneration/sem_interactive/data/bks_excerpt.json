@@ -1,0 +1,190 @@
+{
+  "variable_descriptions": {
+    "opennessvariable": "Openness to Experience (OCEAN personality, avg score -6 to 6)",
+    "consciensiousnessvariable": "Conscientiousness (OCEAN personality, avg score -6 to 6)",
+    "extroversionvariable": "Extroversion (OCEAN personality, avg score -6 to 6)",
+    "neuroticismvariable": "Neuroticism (OCEAN personality, avg score -6 to 6)",
+    "agreeablenessvariable": "Agreeableness (OCEAN personality, avg score -6 to 6)",
+    "powerlessnessvariable": "Powerlessness (computed score, -9 to 9)",
+    "totalfetishcategory": "Total fetish category count (number of fetish categories endorsed)"
+  },
+  "descriptive_stats": {
+    "means": {
+      "opennessvariable": 1.638,
+      "consciensiousnessvariable": 1.268,
+      "extroversionvariable": -1.294,
+      "neuroticismvariable": 0.963,
+      "agreeablenessvariable": 2.003,
+      "powerlessnessvariable": 0.702,
+      "totalfetishcategory": 10.038
+    },
+    "std_devs": {
+      "opennessvariable": 2.579,
+      "consciensiousnessvariable": 2.398,
+      "extroversionvariable": 3.032,
+      "neuroticismvariable": 2.663,
+      "agreeablenessvariable": 2.847,
+      "powerlessnessvariable": 3.611,
+      "totalfetishcategory": 6.076
+    },
+    "correlation_matrix": {
+      "opennessvariable": {
+        "opennessvariable": 1.0,
+        "consciensiousnessvariable": 0.06,
+        "extroversionvariable": 0.14,
+        "neuroticismvariable": -0.096,
+        "agreeablenessvariable": 0.044,
+        "powerlessnessvariable": -0.155,
+        "totalfetishcategory": 0.066
+      },
+      "consciensiousnessvariable": {
+        "opennessvariable": 0.06,
+        "consciensiousnessvariable": 1.0,
+        "extroversionvariable": 0.008,
+        "neuroticismvariable": 0.017,
+        "agreeablenessvariable": 0.06,
+        "powerlessnessvariable": -0.106,
+        "totalfetishcategory": 0.018
+      },
+      "extroversionvariable": {
+        "opennessvariable": 0.14,
+        "consciensiousnessvariable": 0.008,
+        "extroversionvariable": 1.0,
+        "neuroticismvariable": -0.097,
+        "agreeablenessvariable": 0.024,
+        "powerlessnessvariable": -0.174,
+        "totalfetishcategory": 0.0
+      },
+      "neuroticismvariable": {
+        "opennessvariable": -0.096,
+        "consciensiousnessvariable": 0.017,
+        "extroversionvariable": -0.097,
+        "neuroticismvariable": 1.0,
+        "agreeablenessvariable": 0.08,
+        "powerlessnessvariable": 0.192,
+        "totalfetishcategory": 0.023
+      },
+      "agreeablenessvariable": {
+        "opennessvariable": 0.044,
+        "consciensiousnessvariable": 0.06,
+        "extroversionvariable": 0.024,
+        "neuroticismvariable": 0.08,
+        "agreeablenessvariable": 1.0,
+        "powerlessnessvariable": -0.015,
+        "totalfetishcategory": 0.016
+      },
+      "powerlessnessvariable": {
+        "opennessvariable": -0.155,
+        "consciensiousnessvariable": -0.106,
+        "extroversionvariable": -0.174,
+        "neuroticismvariable": 0.192,
+        "agreeablenessvariable": -0.015,
+        "powerlessnessvariable": 1.0,
+        "totalfetishcategory": 0.026
+      },
+      "totalfetishcategory": {
+        "opennessvariable": 0.066,
+        "consciensiousnessvariable": 0.018,
+        "extroversionvariable": 0.0,
+        "neuroticismvariable": 0.023,
+        "agreeablenessvariable": 0.016,
+        "powerlessnessvariable": 0.026,
+        "totalfetishcategory": 1.0
+      }
+    },
+    "n": 15503,
+    "columns": [
+      "opennessvariable",
+      "consciensiousnessvariable",
+      "extroversionvariable",
+      "neuroticismvariable",
+      "agreeablenessvariable",
+      "powerlessnessvariable",
+      "totalfetishcategory"
+    ]
+  },
+  "sem_results": {
+    "model_spec": "Personality =~ opennessvariable + consciensiousnessvariable + extroversionvariable + agreeablenessvariable\nPersonality ~ neuroticismvariable\npowerlessnessvariable ~ Personality + neuroticismvariable + totalfetishcategory",
+    "path_coefficients": [
+      {
+        "from": "Personality",
+        "op": "~",
+        "to": "neuroticismvariable",
+        "estimate": -0.08,
+        "std_err": 0.0061,
+        "p_value": 0.0
+      },
+      {
+        "from": "opennessvariable",
+        "op": "~",
+        "to": "Personality",
+        "estimate": 1.0
+      },
+      {
+        "from": "consciensiousnessvariable",
+        "op": "~",
+        "to": "Personality",
+        "estimate": 0.3733,
+        "std_err": 0.0367,
+        "p_value": 0.0
+      },
+      {
+        "from": "extroversionvariable",
+        "op": "~",
+        "to": "Personality",
+        "estimate": 1.1815,
+        "std_err": 0.0678,
+        "p_value": 0.0
+      },
+      {
+        "from": "agreeablenessvariable",
+        "op": "~",
+        "to": "Personality",
+        "estimate": 0.1446,
+        "std_err": 0.0396,
+        "p_value": 0.0003
+      },
+      {
+        "from": "powerlessnessvariable",
+        "op": "~",
+        "to": "Personality",
+        "estimate": -1.7882,
+        "std_err": 0.1227,
+        "p_value": 0.0
+      },
+      {
+        "from": "powerlessnessvariable",
+        "op": "~",
+        "to": "neuroticismvariable",
+        "estimate": 0.1163,
+        "std_err": 0.0157,
+        "p_value": 0.0
+      },
+      {
+        "from": "powerlessnessvariable",
+        "op": "~",
+        "to": "totalfetishcategory",
+        "estimate": 0.0192,
+        "std_err": 0.0046,
+        "p_value": 0.0
+      }
+    ],
+    "factor_loadings": [],
+    "fit_indices": {
+      "dof": 15.0,
+      "dof_baseline": 23.0,
+      "chi2_p-value": 0.0,
+      "chi2_baseline": 2314.4008,
+      "cfi": 0.8332,
+      "gfi": 0.8283,
+      "agfi": 0.7368,
+      "nfi": 0.8283,
+      "tli": 0.7442,
+      "rmsea": 0.0405,
+      "aic": 25.9487,
+      "bic": 125.383,
+      "loglik": 0.0256,
+      "chi_square": 397.2672
+    }
+  }
+}
